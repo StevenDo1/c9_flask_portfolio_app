@@ -6,6 +6,7 @@ import os
 
 
 
+
 app = Flask(__name__)
 
 
@@ -67,15 +68,12 @@ def time_post():
       return render_template('time.html')
     elif request.method == 'POST':
           print(request.form['text'].split())
+					message = "{}, you are beautfiful.".format(request.form['text]
           
-          for item in request.form['text'].split():
-            answer = (datetime.datetime.now(pytz.timezone("Europe/Dublin")).strftime('Time = ' + '%H:%M:%S' + ' GMT ' + ' Year = ' + '%d-%m-%Y'))
-            #answer = datetime.datetime.now().strftime('Time == ' + '%H:%M:%S' + ' Year == ' + '%d-%m-%Y')
-            #answer = datetime.datetime.now().strftime('%Y-%m-%d \n %H:%M:%S')
-
+		
+         
               
-              
-            return render_template('time.html', result=answer)
+        	return render_template('time.html', result= message)
 
          
 
