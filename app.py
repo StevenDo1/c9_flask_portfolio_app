@@ -68,7 +68,7 @@ def time_post():
       return render_template('time.html')
     elif request.method == 'POST':
           print(request.form['text'].split())
-					message = "{}, you are beautfiful.".format(request.form['text]
+	message = "{}, you are beautfiful.".format(request.form['text]
           
 		
          
